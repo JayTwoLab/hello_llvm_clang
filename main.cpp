@@ -24,9 +24,9 @@ struct Point
 
 std::string make_message()
 {
-    
-    std::string result;
 
+    std::string result;
+ 
     // ------------------------------------------------------------
     // C++20: ranges + std::format
     // ------------------------------------------------------------
