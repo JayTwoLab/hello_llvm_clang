@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Pre-install "LLDB DAP" during VSCode Extension.
+            // Install all from publisher LLVM. (clangd, LLDB DAP, MLIR)
+            "type": "lldb-dap",
+            "request": "launch",
+            "name": "Debug (lldb-dap)",
+            // Default is Linux style
+            "program": "${workspaceFolder}/build/hello",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake Build",
+            // Override executable name per OS
+            "windows": {
+                "program": "${workspaceFolder}/build/hello.exe"
+            },
+            "linux": {
+                "program": "${workspaceFolder}/build/hello"
+            },
+            "osx": {
+                "program": "${workspaceFolder}/build/hello"
+            }
+        }
+    ]
+}

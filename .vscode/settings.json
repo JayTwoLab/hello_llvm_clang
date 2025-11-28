@@ -1,0 +1,16 @@
+{
+    // Setting Up Your Environment for Use with CMake Tools
+    "cmake.generator": "Ninja",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    // Use clang for IntelliSense
+    "C_Cpp.default.compilerPath": "clang++",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**"
+    ],
+    // Format on save (optional)
+    "editor.formatOnSave": true,
+    // Default terminal shell
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.linux": "bash"
+}
