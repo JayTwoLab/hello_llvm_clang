@@ -24,6 +24,7 @@ struct Point
 
 std::string make_message()
 {
+    
     std::string result;
 
     // ------------------------------------------------------------
