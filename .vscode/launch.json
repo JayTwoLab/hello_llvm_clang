@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Pre-install "LLDB DAP" during VSCode Extension.
+            // Install "LLDB DAP" in VSCode Extension.
             // Install all from publisher LLVM. (clangd, LLDB DAP, MLIR)
             "type": "lldb-dap",
             "request": "launch",

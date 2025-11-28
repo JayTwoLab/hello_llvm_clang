@@ -82,7 +82,7 @@ std::string make_message()
         Point p{10, 20};
         Point q = p.move(5, 7);  // Calls deducing-this member function
 
-        result += std::format("[C++26] Point move: ({}, {}) → ({}, {})\n",
+        result += std::format("[C++26] Point move: ({}, {}) -> ({}, {})\n",
                               p.x, p.y, q.x, q.y);
 
         // Enhanced formatting in C++26 (implementation-dependent)
