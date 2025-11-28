@@ -93,6 +93,15 @@ set(EXE_NAME "hello")
 file(GLOB CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 add_executable(${EXE_NAME} ${CPP_SOURCES})
 
-target_compile_features(${EXE_NAME} PRIVATE cxx_std_26) # C++26
-# tested in clang++ 21.1.6 
+target_compile_features(${EXE_NAME} PRIVATE cxx_std_26) 
+#  Classic(c++98, c++03), Modern(c++11, c++14, c++17, c++20, c++23, c++26)
+
+# NOTE: See .vscode/c_cpp_properties.json for C/C++ standard settings 
+#      for VSCode IntelliSense.
+
+# ===========================================================
+# 6) Tested compiler versions   
+# ===========================================================
+# Tested in clang++ 21.1.6 
+
 

@@ -5,8 +5,8 @@
             "name": "Clang",
             "compilerPath": "clang++",
             "intelliSenseMode": "clang-x64",
-            "cppStandard": "c++26",
-            "cStandard": "c17",
+            "cppStandard": "c++26", // Classic(c++98, c++03), Modern(c++11, c++14, c++17, c++20, c++23, c++26)
+            "cStandard": "c17", // K&R(c89), ISO(c99, c11, c17, c23)
             "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "includePath": [
                 "${workspaceFolder}/**"
