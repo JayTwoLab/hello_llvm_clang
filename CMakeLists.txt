@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.26)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+# NOTE: See .vscode/c_cpp_properties.json for C/C++ standard settings 
+#      for VSCode IntelliSense.
 
 # ===========================================================
 # 1) Determine LLVM / Clang root path
@@ -85,9 +87,9 @@ set(CMAKE_MODULE_LINKER_FLAGS
     "${CMAKE_MODULE_LINKER_FLAGS} -fuse-ld=lld")
 
 # c++23 standard flags for different compilers
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/std:c++23>")
-add_compile_options("$<$<CXX_COMPILER_ID:GNU>:-std=c++23>")
-add_compile_options("$<$<CXX_COMPILER_ID:Clang>:-std=c++23>")
+# add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/std:c++23>")
+# add_compile_options("$<$<CXX_COMPILER_ID:GNU>:-std=c++23>")
+# add_compile_options("$<$<CXX_COMPILER_ID:Clang>:-std=c++23>")
 
 # ===========================================================
 # 4) Project declaration
@@ -104,12 +106,6 @@ set(EXE_NAME "hello")
 # Collect all .cpp files in current directory
 file(GLOB CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 add_executable(${EXE_NAME} ${CPP_SOURCES})
-
-# target_compile_features(${EXE_NAME} PRIVATE cxx_std_23) 
-#  Classic(c++98, c++03), Modern(c++11, c++14, c++17, c++20, c++23, c++26)
-
-# NOTE: See .vscode/c_cpp_properties.json for C/C++ standard settings 
-#      for VSCode IntelliSense.
 
 # ===========================================================
 # 6) Tested compiler versions   

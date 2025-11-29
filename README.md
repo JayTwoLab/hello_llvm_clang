@@ -1,8 +1,10 @@
 
-# Hello LLVM/Clang Demo Project
+# LLVM/Clang Demo Project
 
-- 본 프로젝트는 **`LLVM`/`Clang` 기반 `C++` 컴파일 환경**, **`VSCode` 개발 설정**, **C++20~C++26 최신 기능을 활용한 예제 코드** 를 포함한 최소/완성형 템플릿입니다.
+- 본 프로젝트는 **`LLVM`/`Clang` 기반 `C++` 컴파일 환경**, **`VSCode` 개발 설정**, **`C++20~26` 최신 기능을 활용한 예제 코드** 를 포함한 최소/완성형 템플릿입니다.
 - `Windows`·`Linux` 에서 공통적으로 동일한 구조로 사용하도록 설계되었습니다.
+
+<br />
 
 ---
 
@@ -22,7 +24,7 @@
 
 ## 2. 주요 파일 설명
 
-### 2.1 CMakeLists.txt
+### 2.1 `CMakeLists.txt`
 
 - `LLVM_HOME` 환경 변수를 우선 적용
    - `Windows` 환경에서 자동으로 `C:/llvm-package` 사용
@@ -41,14 +43,14 @@
 
 ### 2.2 예제 (`main.cpp`)
 
-* **`C++20` `ranges` / `views` / `std::format`**
-* **`C++23` `std::expected`**
-* **`C++26` `deducing this` 문법 적용 (`Point::move`)**
+* `C++20` `ranges` / `views` / `std::format`
+* `C++23` `std::expected`
+* `C++26` `deducing this` 문법 적용 (`Point::move`)
 * 고급 예제 포함(필터링·변환·`join view`·구조화된 메시지 생성 등)
 
 <br />
 
-- 이 파일 하나만으로 **C++20~26 기능의 실제 실행 예제** 를 모두 확인할 수 있습니다.
+- 이 파일 하나만으로 **`C++20~26` 기능의 실제 실행 예제** 를 모두 확인할 수 있습니다.
 
 <br />
 
@@ -58,34 +60,33 @@
 
 #### 2.3.1 `c_cpp_properties.json`
 
-* IntelliSense 엔진을 clang 기반으로 설정
-* compile_commands.json을 자동 참고
-* includePath 기본 설정
+- `IntelliSense` 엔진을 `clang` 기반으로 설정
+- `compile_commands.json`을 자동 참고
+- `includePath` 기본 설정
 
 #### 2.3.2 extensions.json
 
-* 다음 확장 자동 추천
-
-  * ms-vscode.cmake-tools
-  * ms-vscode.cpptools
-  * llvm-vs-code-extensions.vscode-clangd
+- 다음 확장 자동 추천
+   - `ms-vscode.cmake-tools`
+   - `ms-vscode.cpptools`
+   - `llvm-vs-code-extensions.vscode-clangd`
 
 #### 2.3.3 `launch.json`
 
-* **LLDB-DAP 기반 디버깅 설정**
-* OS별 실행 파일 자동 분기 (Windows는 hello.exe)
+- **`LLDB-DAP` 기반 디버깅 설정**
+- `OS`별 실행 파일 자동 분기 (`Windows`는 `hello.exe`)
 
 #### 2.3.4 `settings.json`
 
-* CMake generator = Ninja
-* clang++를 IntelliSense 기본 컴파일러로 설정
-* editor.formatOnSave 옵션
+- `CMake generator = Ninja`
+- `clang++`를 `IntelliSense` 기본 컴파일러로 설정
+- `editor.formatOnSave` 옵션
 
 #### 2.3.5 `tasks.json`
 
-* `CMake Configure`
-* `CMake Build`
-* VSCode 빌드 자동화 구성
+- `CMake Configure`
+- `CMake Build`
+- `VSCode` 빌드 자동화 구성
 
 <br />
 
@@ -93,7 +94,7 @@
 
 ## 3. 빌드 및 실행 방법
 
-### 3.1 Windows / Linux 공통
+### 3.1 `Windows` / `Linux` 공통
 
 ```bash
 cmake -S . -B build -G Ninja
@@ -102,7 +103,7 @@ cmake --build build --config Debug
 
 ### 3.2 실행
 
-#### Linux
+#### `Linux`
 
 ```bash
 ./build/hello
@@ -118,7 +119,7 @@ cmake --build build --config Debug
 
 ---
 
-## 4. 디버깅 (VSCode)
+## 4. 디버깅 (`VSCode`)
 
 - (1) **확장 설치**
    - `ms-vscode.cmake-tools`
