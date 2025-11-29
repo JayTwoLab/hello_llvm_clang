@@ -1,11 +1,11 @@
 # ===========================================================
-# OS 공통
+# Common OS
 # ===========================================================
 .DS_Store
 Thumbs.db
 
 # ===========================================================
-# 빌드 디렉토리 (CMake, Ninja, MSVC, Make 등)
+# Build directories (CMake, Ninja, MSVC, Make, etc.)
 # ===========================================================
 build/
 build-*/
@@ -26,11 +26,11 @@ CTestTestfile.cmake
 CPack*  
 Makefile
 
-# compile_commands.json 은 VSCode IntelliSense용으로 유지 (필요 시 유지)
+# Keep compile_commands.json for VSCode IntelliSense (keep if needed)
 # compile_commands.json
 
 # ===========================================================
-# VSCode & IDE 설정 파일
+# VSCode & IDE settings files
 # ===========================================================
 .vscode/*
 !.vscode/settings.json
@@ -39,13 +39,13 @@ Makefile
 !.vscode/extensions.json
 !.vscode/c_cpp_properties.json
 
-# VSCode 기타 잡파일
+# Other VSCode miscellaneous files
 .history/
 *.code-workspace
 
 # ===========================================================
-# LLVM / Clang / LLD 관련 바이너리
-# (실행 파일은 build 안에 있으므로 별도 제외 필요 없음)
+# LLVM / Clang / LLD related binaries
+# (No need to exclude executables separately since they are in build)
 # ===========================================================
 *.obj
 *.o
